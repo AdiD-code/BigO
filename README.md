@@ -1,4 +1,3 @@
-```markdown
 # TufanTicket  
 
 **Tagline:** Life ek concert hai, bas ticket sahi hona chahiye
