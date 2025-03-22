@@ -11,6 +11,7 @@ import hashlib
 from pymongo import MongoClient
 from functools import lru_cache
 import time
+from backend.utils.logger import get_logger
 
 # Initialize logging
 from utils.logger import get_logger
@@ -98,6 +99,9 @@ def fetch_meraevents(city: str, category: Optional[str] = None) -> List[Dict]:
     except Exception as e:
         logger.error(f"Error fetching MeraEvents data: {str(e)}")
         return []
+
+def fetch_events_from_meraevent(city: str, category: Optional[str] = None):
+    return fetch_meraevents(city, category)
 
 def scrape_bookmyshow(city: str, category: Optional[str] = None) -> List[Dict]:
     """

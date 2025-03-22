@@ -104,7 +104,7 @@ def create_interaction(interaction_data: dict) -> str:
     
     # Ensure timestamp is set if not provided
     if 'timestamp' not in interaction_data:
-        interaction_data['timestamp'] = datetime.utcnow()
+        interaction_data['timestamp'] = datetime.now()
     
     result = interactions_collection.insert_one(interaction_data)
     return str(result.inserted_id)
